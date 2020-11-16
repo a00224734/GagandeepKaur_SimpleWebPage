@@ -1,0 +1,23 @@
+﻿@page
+@model GagandeepKaurA00224734_SimpleWebPage.Pages.RequestPageModel
+@{
+    ViewData["Title"] = "Request Page";
+}
+
+<div class="text-center">
+    <h1>@ViewData["Title"]</h1>
+</div>
+
+<dl>
+    <dt>Accept</dt>
+    <dd>@Request.Headers["Accept"]</dd>
+    <dt>Accept-Encoding</dt>
+    <dd>@Request.Headers["Accept-Encoding"]</dd>
+    <dt>User-Agent</dt>
+    <dd>@Request.Headers["User-Agent"]</dd>
+    <dt>Host</dt>
+    <dd>@Request.Headers["Host"]</dd>
+    <!-- Another Way -->
+    <dt>Host & Path</dt>
+    <dd>@Request.Scheme://@Request.Host.Value@Request.Path.Value</dd>
+</dl>
